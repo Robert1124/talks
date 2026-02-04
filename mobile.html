@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond ChatGPT - Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #111827 0%, #1f2937 40%, #0f172a 100%);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        main {
+            height: 100vh;
+            overflow-y: auto;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .page {
+            height: 100vh;
+            scroll-snap-align: start;
+            padding: 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1.25rem;
+        }
+
+        .page h1,
+        .page h2 {
+            line-height: 1.2;
+        }
+
+        .title {
+            font-size: clamp(2rem, 8vw, 3rem);
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 5vw, 1.6rem);
+            color: #f472b6;
+            font-weight: 700;
+        }
+
+        .muted {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 540px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .list {
+            list-style: none;
+            text-align: left;
+            width: 100%;
+            max-width: 540px;
+        }
+
+        .list li {
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .two-col {
+            display: grid;
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 540px;
+        }
+
+        .demo-stack {
+            display: grid;
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 540px;
+        }
+
+        .chip {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.2);
+            border: 1px solid rgba(96, 165, 250, 0.4);
+            color: #93c5fd;
+            padding: 0.35rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .footer {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .accent {
+            color: #60a5fa;
+            font-weight: 700;
+        }
+
+        .danger {
+            color: #f97316;
+            font-weight: 700;
+        }
+
+        .warning-box {
+            width: 100%;
+            max-width: 540px;
+            border-radius: 12px;
+            border: 2px solid rgba(248, 113, 113, 0.6);
+            background: rgba(248, 113, 113, 0.1);
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .warning-box h3 {
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
+        }
+
+        .snap-hint {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="page">
+            <div class="title">You think <span class="accent">AI</span> is just ChatGPT?</div>
+            <div class="subtitle">Think again.</div>
+            <div class="muted">You are viewing the mobile version. For full animations and complete demos, open the desktop version.</div>
+            <div class="muted">Yiwen Wu · HERA Lab</div>
+            <div class="snap-hint">Swipe to go page by page</div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">ChatGPT is just the tip of the iceberg</h2>
+            <img class="image" src="ice_above.png" alt="Iceberg" />
+        </section>
+
+        <section class="page">
+            <h2 class="title">What’s under the surface?</h2>
+            <img class="image" src="ice_below.png" alt="Iceberg below" />
+        </section>
+
+        <section class="page">
+            <h2 class="title">AI Capabilities Ecosystem</h2>
+            <div class="two-col">
+                <div class="card">
+                    <h3>LLM Core</h3>
+                    <div class="muted">Large language models that reason and generate.</div>
+                </div>
+                <div class="card">
+                    <h3>Multimodal</h3>
+                    <div class="muted">Understand images, audio, and video.</div>
+                </div>
+                <div class="card">
+                    <h3>AI Agents</h3>
+                    <div class="muted">Plan and execute multi-step tasks.</div>
+                </div>
+                <div class="card">
+                    <h3>Skills</h3>
+                    <div class="muted">Custom functions and tool use.</div>
+                </div>
+                <div class="card">
+                    <h3>Fine-tuning</h3>
+                    <div class="muted">Train on your data and style.</div>
+                </div>
+                <div class="card">
+                    <h3>RAG</h3>
+                    <div class="muted">Grounded answers from sources.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">From Theory to Practice</h2>
+            <div class="muted">Let’s look at how retrieval changes responses.</div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">Without RAG</h2>
+            <div class="demo-stack">
+                <div class="card">
+                    <div class="chip">User Question</div>
+                    <div class="muted">When is the office hour?</div>
+                </div>
+                <div class="card">
+                    <div class="chip">System Prompt</div>
+                    <div class="muted">Answer questions based on the provided syllabus.</div>
+                </div>
+                <div class="card">
+                    <div class="chip">LLM Response</div>
+                    <div class="muted">Monday 2-4pm and Wednesday 10-12pm by contacting Dr. Smith.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">With RAG</h2>
+            <div class="demo-stack">
+                <div class="card">
+                    <div class="chip">Chunk Retrieved</div>
+                    <div class="muted">Office hours: Monday 2-4pm, Wednesday 10-12pm.</div>
+                </div>
+                <div class="card">
+                    <div class="chip">Prompt + Chunk</div>
+                    <div class="muted">System prompt + relevant chunk from syllabus.</div>
+                </div>
+                <div class="card">
+                    <div class="chip">Grounded Response</div>
+                    <div class="muted">Office hours are Monday 2-4pm and Wednesday 10-12pm.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">StatPal</h2>
+            <div class="muted">Supports students in statistical analysis with contextual hints.</div>
+            <div class="two-col">
+                <div class="card">
+                    <h3>For Students</h3>
+                    <div class="muted">Guided statistical concepts and analysis hints.</div>
+                </div>
+                <div class="card">
+                    <h3>For Instructors</h3>
+                    <div class="muted">Monitor workflow patterns and comprehension.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">StatPal UI</h2>
+            <img class="image" src="statpal_screenshot1.png" alt="StatPal Screenshot" />
+        </section>
+
+        <section class="page">
+            <h2 class="title">StatPal UI</h2>
+            <img class="image" src="statpal_screenshot2.png" alt="StatPal Screenshot 2" />
+        </section>
+
+        <section class="page">
+            <h2 class="title">StatPal UI</h2>
+            <img class="image" src="statpal_screenshot3.png" alt="StatPal Screenshot 3" />
+        </section>
+
+        <section class="page">
+            <h2 class="title">StudyGroup</h2>
+            <p class="muted">An AI-powered study group platform for large online STEM courses that supports equitable participation and deeper learning without adding instructor workload.</p>
+        </section>
+
+        <section class="page">
+            <h2 class="title">But wait… what could go wrong?</h2>
+            <div class="muted">Understanding AI’s limitations before you design your research.</div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">AI is not deterministic</h2>
+            <div class="demo-stack">
+                <div class="card">
+                    <div class="chip">Output 1</div>
+                    <div class="muted">Student appears anxious and stressed about exams.</div>
+                </div>
+                <div class="card">
+                    <div class="chip">Output 2</div>
+                    <div class="muted">Student shows mild stress but remains optimistic.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">What does this mean for research?</h2>
+            <ul class="list">
+                <li>Results may vary from run to run.</li>
+                <li>Reproducibility and validity need safeguards.</li>
+                <li>Report model settings and run multiple trials.</li>
+            </ul>
+        </section>
+
+        <section class="page">
+            <h2 class="title">AI can confidently lie</h2>
+            <div class="card">
+                <div class="muted">Researcher: Can you analyze the emotional patterns in this journal?</div>
+            </div>
+            <div class="card">
+                <div class="muted">AI: Based on Bowlby’s 1989 digital attachment framework…</div>
+            </div>
+            <div class="warning-box">
+                <h3 class="danger">Hallucination detected</h3>
+                <ul class="list">
+                    <li>Bowlby never wrote about “digital attachment.”</li>
+                    <li>No journal entry from March 15th.</li>
+                    <li>“Anxious-avoidant” is not standard terminology.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">Why hallucinations are dangerous</h2>
+            <ul class="list">
+                <li>False patterns and incorrect inferences.</li>
+                <li>Fabricated citations waste time and mislead research.</li>
+                <li>Wrong actions in high-stakes contexts.</li>
+            </ul>
+        </section>
+
+        <section class="page">
+            <h2 class="title">Student data is sacred</h2>
+            <ul class="list">
+                <li>Consent: Do students understand AI analysis?</li>
+                <li>Storage: Where is data stored and who has access?</li>
+                <li>Bias: Models may perform unevenly across groups.</li>
+                <li>Re-identification risks and misuse.</li>
+            </ul>
+        </section>
+
+        <section class="page">
+            <h2 class="title">Tools for getting started</h2>
+            <div class="two-col">
+                <div class="card">
+                    <h3>Google AI Studio</h3>
+                    <div class="muted">Prompt testing and model comparison.</div>
+                </div>
+                <div class="card">
+                    <h3>Cursor</h3>
+                    <div class="muted">AI-assisted code editor for building tools.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page">
+            <h2 class="title">Thank You!</h2>
+            <div class="footer">Questions? Contact: yiw423@lehigh.edu</div>
+        </section>
+    </main>
+</body>
+</html>
